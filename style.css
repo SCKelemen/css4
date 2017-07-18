@@ -1,0 +1,14 @@
+:root {
+    --background-color: #333;
+    --foreground-color: #06C;
+    --header-color: #C00;
+}
+
+body {
+    background-color: var( --background-color );
+    color: var( --foreground-color );
+}
+
+h1 {
+    color: var( --header-color );
+}
