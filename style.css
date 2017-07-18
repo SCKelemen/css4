@@ -10,7 +10,7 @@
     --color-secondary-text: #eceff1;
     
     --color-material-background: #e1e2e1;
-    --color-material-card: #f5f5f6;
+    --color-material-card-background: #f5f5f6;
 }
 
 body {
@@ -19,5 +19,15 @@ body {
 }
 
 h1 {
+    color: var( --color-primary );
+}
+
+.card {
+    background-color: var( --color-material-card-background );
+    width: 20vw;
+    height: 40vh;
+    display: block;
+}
+.card h2 {
     color: var( --color-primary );
 }
