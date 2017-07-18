@@ -1,14 +1,23 @@
 :root {
-    --background-color: #333;
-    --foreground-color: #06C;
-    --header-color: #C00;
+    --color-primary: #ff6e40;
+    --color-primary-light: #ffa06d;
+    --color-primary-dark: #c53d13;
+    --color-primary-text: #212121;
+    
+    --color-secondary: #039be5;
+    --color-secondary-light: #63ccff;
+    --color-secondary-dark: #006db3;
+    --color-secondary-text: #eceff1;
+    
+    --color-material-background: #e1e2e1;
+    --color-material-card: #f5f5f6;
 }
 
 body {
-    background-color: var( --background-color );
-    color: var( --foreground-color );
+    background-color: var( --color-material-background );
+    color: var( --color-primary-text );
 }
 
 h1 {
-    color: var( --header-color );
+    color: var( --color-primary );
 }
