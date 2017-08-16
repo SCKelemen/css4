@@ -1,1 +1,9 @@
 
+body > div {
+  background-color: #eee;
+  padding: 1em;
+}
+
+body > div:nth-child(odd){
+ background-color: #ccc; 
+}
