@@ -5,5 +5,10 @@ body > div {
 }
 
 body > div:nth-child(odd){
- background-color: #ccc; 
+  background-color: #ccc; 
+}
+
+body {
+    display: grid;
+    grid-template-columns: 70% 30%;
 }
