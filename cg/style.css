@@ -33,6 +33,15 @@
     --viewport-large: 1800px;
     --viewport-2k: 2400px;
     --viewport-4k: 3100px;
+    /* 
+        The var() function can be used in place of any part of a 
+        value in any property on an element. The var() function 
+        can not be used as property names, selectors, or anything
+        else besides property values. (Doing so usually produces
+        invalid syntax, or else a value whose meaning has no
+        connection to the variable.)
+        https://www.w3.org/TR/css-variables-1/#using-variables
+    */
 }
 
 /* phone screens */
