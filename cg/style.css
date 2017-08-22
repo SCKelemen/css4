@@ -41,7 +41,78 @@
         grid-template-columns: 1fr;
         grid-gap: 1em;
     }
+    .sizeIndicator {
+        background-color: red;
+    }
 }
+
+/* table portrait */
+@media only screen and (min-width: var( --viewport-tablet-portrait )) {
+    .cardgrid {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+    .sizeIndicator {
+        background-color: purple;
+    }
+}
+
+/* tablet landscape */
+@media only screen and (min-width: var( --viewport-tablet-landscape )) {
+    .cardgrid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+    .sizeIndicator {
+        background-color: blueviolet;
+    }
+}
+
+/* desktop screens */
+@media only screen and (min-width: var( --viewport-desktop )) {
+    .cardgrid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+    .sizeIndicator {
+        background-color: blue;
+    }
+}
+
+/* 2k screens */
+@media only screen and (min-width: var( --viewport-2k )) {
+    .cardgrid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+    .sizeIndicator {
+        background-color: aqua;
+    }
+}
+
+/* 4k screens */
+@media only screen and (min-width: var( --viewport-4k )) {
+    .cardgrid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+    .sizeIndicator {
+        background-color: green;
+    }
+}
+
+
+.sizeIndicator {
+    height: 100px;
+    width: 100%;
+    display: block;
+    color: yellow;
+}
+
+
+
+
+
 
 html {
     font-family: sans-serif;
