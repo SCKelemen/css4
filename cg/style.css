@@ -1,20 +1,28 @@
 :root {
     /* Document Used Variables */
-    --color-background: var( --theme-color-background-dark );
-    --color-card: var( --theme-color-card-dark );
+    --color-background: var( --theme-dark-color-background );
+    --color-card: var( --theme-dark-color-card );
+    --color-card-title: var( --theme-dark-color-text-primary );
+    --color-card-text: var( --theme-dark-color-text-secondary );
 
     /* Light theme */
-    --theme-color-statusbar-light: #e0e0e0;
-    --theme-color-appbar-light: #f5f5f5;   
-    --theme-color-background-light: #fafafa;
-    --theme-color-card-light: #fff;
-    
+    --theme-light-color-statusbar: #e0e0e0;
+    --theme-light-color-appbar: #f5f5f5;   
+    --theme-light-color-background: #fafafa;
+    --theme-light-color-card: #fff;
+    --theme-light-color-text-primary:  rgba( 0,0,0, 0.87 );
+    --theme-light-color-text-secondary: rgba( 0,0,0, 0.54 );
+    --theme-light-color-text-disabled: rgba( 0,0,0, 0.38 );
+   
 
     /* Dark Theme */    
-    --theme-color-statusbar-dark: #000;
-    --theme-color-appbar-dark: #212121;   
-    --theme-color-background-dark: #303030;
-    --theme-color-card-dark: #424242;  
+    --theme-dark-color-statusbar: #000;
+    --theme-dark-color-appbar: #212121;   
+    --theme-dark-color-background: #303030;
+    --theme-dark-color-card: #424242;
+    --theme-dark-color-text-primary:  rgb( 255,255,255 );
+    --theme-dark-color-text-secondary: rgba( 255,255,255, 0.7 );
+    --theme-dark-color-text-disabled: rgba( 255,255,255, 0.5 );  
 }
 
 html {
@@ -63,4 +71,10 @@ body {
     background-color: var( --color-card );
     border-radius: 2px;
     overflow: hidden;
+}
+.cardTitle {
+    color: var( --color-card-title );
+}
+.cardContent {
+    color: var( --color-card-text );
 }
