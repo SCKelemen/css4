@@ -23,6 +23,24 @@
     --theme-dark-color-text-primary:  rgb( 255,255,255 );
     --theme-dark-color-text-secondary: rgba( 255,255,255, 0.7 );
     --theme-dark-color-text-disabled: rgba( 255,255,255, 0.5 );  
+
+
+    /* media queries */
+    --viewport-phone: 599px;
+    --viewport-tablet-portrait: 600px;
+    --viewport-tablet-landscape: 900px;
+    --viewport-desktop: 1200px;
+    --viewport-large: 1800px;
+    --viewport-2k: 2400px;
+    --viewport-4k: 3100px;
+}
+
+/* phone screens */
+@media only screen and (max-width: var( --viewport-phone )) {
+    .cardgrid {
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+    }
 }
 
 html {
