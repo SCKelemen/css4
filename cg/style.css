@@ -4,14 +4,17 @@
     --color-card: var( --theme-color-card-dark );
 
     /* Light theme */
-    --theme-color-background: #e2e1e0;
-    --theme-color-card: #fff;
+    --theme-color-statusbar-light: #e0e0e0;
+    --theme-color-appbar-light: #f5f5f5;   
+    --theme-color-background-light: #fafafa;
+    --theme-color-card-light: #fff;
+    
 
     /* Dark Theme */    
-    --theme-color-background-dark: #303030;
-    --theme-color-card-dark: #424242;
     --theme-color-statusbar-dark: #000;
     --theme-color-appbar-dark: #212121;   
+    --theme-color-background-dark: #303030;
+    --theme-color-card-dark: #424242;  
 }
 
 html {
