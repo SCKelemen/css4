@@ -1,3 +1,19 @@
+:root {
+    /* Document Used Variables */
+    --color-background: var( --theme-color-background-dark );
+    --color-card: var( --theme-color-card-dark );
+
+    /* Light theme */
+    --theme-color-background: #e2e1e0;
+    --theme-color-card: #fff;
+
+    /* Dark Theme */    
+    --theme-color-background-dark: #303030;
+    --theme-color-card-dark: #424242;
+    --theme-color-statusbar-dark: #000;
+    --theme-color-appbar-dark: #212121;   
+}
+
 html {
     font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -7,24 +23,21 @@ html {
 }
 
 body {
+    background-color: var( --color-background );
     margin: 0;
-    background-color: #aaf;
 }
 
 .card {
-    background-color: #eee;
     padding: 1em;
 }
-
+/*
 .cardgrid > .card:nth-child(odd){
-  background-color: #ccc; 
 }
-
+*/
 .cardgrid {
     display: grid;
     grid-template-columns: 50% 40%;
     grid-gap: 1.2em;
-    background: #e2e1e0;
     text-align: center;
 }
 
@@ -44,7 +57,7 @@ body {
 }
 
 .gCard {
-    background-color: #fff;
+    background-color: var( --color-card );
     border-radius: 2px;
     overflow: hidden;
 }
