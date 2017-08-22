@@ -42,10 +42,16 @@
         connection to the variable.)
         https://www.w3.org/TR/css-variables-1/#using-variables
     */
+
+    /* 
+        Media queries should use EM units instead of pixel
+        or REM units, to ensure consistant results.
+        https://zellwk.com/blog/media-query-units/
+    */
 }
 
 /* phone screens */
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 37.4px) {
     .cardgrid {
         grid-template-columns: 1fr;
         grid-gap: 1em;
@@ -56,7 +62,7 @@
 }
 
 /* table portrait */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 37.5em) {
     .cardgrid {
         grid-template-columns: repeat( 3, 1fr );
         grid-gap: 1em;
@@ -67,7 +73,7 @@
 }
 
 /* tablet landscape */
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 56.25em) {
     .cardgrid {
         grid-template-columns: repeat( 4, 1fr );
         grid-gap: 1em;
@@ -78,7 +84,7 @@
 }
 
 /* desktop screens */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 75em) {
     .cardgrid {
         grid-template-columns: repeat( 6, 1fr );
         grid-gap: 1em;
@@ -89,7 +95,7 @@
 }
 
 /* large screens */
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 112.5em) {
     .cardgrid {
         grid-template-columns: repeat( 9, 1fr );
         grid-gap: 1em;
@@ -100,7 +106,7 @@
 }
 
 /* 2k screens */
-@media only screen and (min-width: 2400px) {
+@media only screen and (min-width: 150px) {
     .cardgrid {
         grid-template-columns: repeat( 12, 1fr );
         grid-gap: 1em;
@@ -111,7 +117,7 @@
 }
 
 /* 4k screens */
-@media only screen and (min-width: 3100px) {
+@media only screen and (min-width: 200em) {
     .cardgrid {
         grid-template-columns: repeat( 15, 1fr);
         grid-gap: 1em;
