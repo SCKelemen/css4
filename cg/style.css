@@ -58,7 +58,7 @@
 /* table portrait */
 @media only screen and (min-width: 600px) {
     .cardgrid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat( 3, 1fr );
         grid-gap: 1em;
     }
     .sizeIndicator {
@@ -69,7 +69,7 @@
 /* tablet landscape */
 @media only screen and (min-width: 900px) {
     .cardgrid {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat( 4, 1fr );
         grid-gap: 1em;
     }
     .sizeIndicator {
@@ -80,7 +80,7 @@
 /* desktop screens */
 @media only screen and (min-width: 1200px) {
     .cardgrid {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat( 6, 1fr );
         grid-gap: 1em;
     }
     .sizeIndicator {
@@ -91,7 +91,7 @@
 /* large screens */
 @media only screen and (min-width: 1800px) {
     .cardgrid {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat( 9, 1fr );
         grid-gap: 1em;
     }
     .sizeIndicator {
@@ -102,7 +102,7 @@
 /* 2k screens */
 @media only screen and (min-width: 2400px) {
     .cardgrid {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat( 12, 1fr );
         grid-gap: 1em;
     }
     .sizeIndicator {
@@ -113,7 +113,7 @@
 /* 4k screens */
 @media only screen and (min-width: 3100px) {
     .cardgrid {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat( 15, 1fr);
         grid-gap: 1em;
     }
     .sizeIndicator {
@@ -156,7 +156,7 @@ body {
 */
 .cardgrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat( 6, 1fr );
     grid-gap: 1.2em;
     text-align: center;
 }
