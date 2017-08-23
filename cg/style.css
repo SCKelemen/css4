@@ -49,6 +49,9 @@ body {
     margin: 0;
     margin-top: 4.3em;
 }
+.rtl {
+    direction: rtl;
+}
 
 
 .appbar {
@@ -168,4 +171,34 @@ body {
 }
 .cardContent {
     color: var( --color-card-text );
+}
+
+.imageCard {
+    background-color: var( --color-card );
+    border-radius: .3em;
+    overflow: hidden;
+}
+.imageCard img {
+    width: 100%;
+    height: auto;
+
+}
+.imageCard .title {
+    color: var( --color-card-title );
+    
+}
+
+.imageCard .floattitle {    
+    color: var( --color-card-title );
+    display: flex;
+    margin-top: -2em;
+    padding-left: 1.5em;
+    padding-bottom: .5em;
+    max-width: 100%;
+    overflow: hidden;
+
+}
+
+.imageCard .content {
+
 }
