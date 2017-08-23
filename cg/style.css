@@ -42,7 +42,13 @@
         connection to the variable.)
         https://www.w3.org/TR/css-variables-1/#using-variables
     */
-
+    --viewport-phone-em: 599px;
+    --viewport-tablet-portrait-em: 600px;
+    --viewport-tablet-landscape-em: 900px;
+    --viewport-desktop-em: 1200px;
+    --viewport-large-em: 1800px;
+    --viewport-2k-em: 2400px;
+    --viewport-4k-em: 3100px;
     /* 
         Media queries should use EM units instead of pixel
         or REM units, to ensure consistant results.
