@@ -48,91 +48,57 @@
         or REM units, to ensure consistant results.
         https://zellwk.com/blog/media-query-units/
     */
+
+    --column-count: 1;
 }
 
 /* phone screens */
 @media only screen and (max-width: 37.4px) {
-    .cardgrid {
-        grid-template-columns: 1fr;
-        grid-gap: 1em;
-    }
-    .sizeIndicator {
-        background-color: red;
+    :root {
+        -moz-column-count: 2;
     }
 }
 
 /* table portrait */
 @media only screen and (min-width: 37.5em) {
-    .cardgrid {
-        grid-template-columns: repeat( 3, 1fr );
-        grid-gap: 1em;
-    }
-    .sizeIndicator {
-        background-color: purple;
+    :root {
+        --column-count: 3;
     }
 }
 
 /* tablet landscape */
 @media only screen and (min-width: 56.25em) {
-    .cardgrid {
-        grid-template-columns: repeat( 4, 1fr );
-        grid-gap: 1em;
-    }
-    .sizeIndicator {
-        background-color: blueviolet;
+    :root {
+        --column-count: 4;
     }
 }
 
 /* desktop screens */
 @media only screen and (min-width: 75em) {
-    .cardgrid {
-        grid-template-columns: repeat( 6, 1fr );
-        grid-gap: 1em;
-    }
-    .sizeIndicator {
-        background-color: blue;
+    :root {
+        --column-count: 6
     }
 }
 
 /* large screens */
 @media only screen and (min-width: 112.5em) {
-    .cardgrid {
-        grid-template-columns: repeat( 9, 1fr );
-        grid-gap: 1em;
-    }
-    .sizeIndicator {
-        background-color: aqua;
+    :root {
+        --column-count: 9;
     }
 }
 
 /* 2k screens */
 @media only screen and (min-width: 150px) {
-    .cardgrid {
-        grid-template-columns: repeat( 12, 1fr );
-        grid-gap: 1em;
-    }
-    .sizeIndicator {
-        background-color: green;
+    :root {
+        --column-count: 12;
     }
 }
 
 /* 4k screens */
 @media only screen and (min-width: 200em) {
-    .cardgrid {
-        grid-template-columns: repeat( 15, 1fr);
-        grid-gap: 1em;
+    :root {
+        --column-count: 16;
     }
-    .sizeIndicator {
-        background-color: darkgreen;
-    }
-}
-
-
-.sizeIndicator {
-    height: 100px;
-    width: 100%;
-    display: block;
-    color: yellow;
 }
 
 
@@ -162,7 +128,7 @@ body {
 */
 .cardgrid {
     display: grid;
-    grid-template-columns: repeat( 6, 1fr );
+    grid-template-columns: repeat( var( --column-count ), 1fr );
     grid-gap: 1.2em;
     text-align: center;
 }
