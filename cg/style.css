@@ -1,9 +1,11 @@
 :root {
     /* Document Used Variables */
     --color-background: var( --theme-dark-color-background );
+    --color-appbar: var( --theme-dark-color-statusbar );
     --color-card: var( --theme-dark-color-card );
     --color-card-title: var( --theme-dark-color-text-primary );
     --color-card-text: var( --theme-dark-color-text-secondary );
+    --target-card-size: 15em;
 
     /* Light theme */
     --theme-light-color-statusbar: #e0e0e0;
@@ -49,7 +51,7 @@
         https://zellwk.com/blog/media-query-units/
     */
 
-    --column-count: 1;
+
 }
 
 /* phone screens */
@@ -119,6 +121,23 @@ body {
     margin: 0;
 }
 
+
+.appbar {
+    background-color: var( --color-appbar );
+    color: var( --theme-dark-color-text-primary );
+    position: fixed;
+    top:0;
+    height: 2.5em;
+    width: 100%;
+}
+.appbar .icon {
+    padding-top: 1em;
+    padding-left: 1em;
+}
+.appbar * {
+    display: inline-block;
+}
+
 .card {
     padding: 1em;
 }
@@ -128,7 +147,7 @@ body {
 */
 .cardgrid {
     display: grid;
-    grid-template-columns: repeat( var( --column-count ), 1fr );
+    grid-template-columns: repeat( auto-fill, minmax( var( --target-card-size ), 1fr) );
     grid-gap: 1.2em;
     text-align: center;
 }
