@@ -27,91 +27,13 @@
     --theme-dark-color-text-disabled: rgba( 255,255,255, 0.5 );  
 
 
-    /* media queries */
-    --viewport-phone: 599px;
-    --viewport-tablet-portrait: 600px;
-    --viewport-tablet-landscape: 900px;
-    --viewport-desktop: 1200px;
-    --viewport-large: 1800px;
-    --viewport-2k: 2400px;
-    --viewport-4k: 3100px;
-    /* 
-        The var() function can be used in place of any part of a 
-        value in any property on an element. The var() function 
-        can not be used as property names, selectors, or anything
-        else besides property values. (Doing so usually produces
-        invalid syntax, or else a value whose meaning has no
-        connection to the variable.)
-        https://www.w3.org/TR/css-variables-1/#using-variables
-    */
-    --viewport-phone-em: 599px;
-    --viewport-tablet-portrait-em: 600px;
-    --viewport-tablet-landscape-em: 900px;
-    --viewport-desktop-em: 1200px;
-    --viewport-large-em: 1800px;
-    --viewport-2k-em: 2400px;
-    --viewport-4k-em: 3100px;
-    /* 
-        Media queries should use EM units instead of pixel
-        or REM units, to ensure consistant results.
-        https://zellwk.com/blog/media-query-units/
-    */
-
-
+    /* RTL Support */
+    --i18n-begin: left; /*  left to right */
+    --i18n-end: right; /* left to right */
+    --i18n-begin-pad: 1em;
+    --i18n-end-pad: 1em;
+    --i18n-direction: ltr; /* left to right */
 }
-
-/* phone screens */
-@media only screen and (max-width: 37.4px) {
-    :root {
-        -moz-column-count: 2;
-    }
-}
-
-/* table portrait */
-@media only screen and (min-width: 37.5em) {
-    :root {
-        --column-count: 3;
-    }
-}
-
-/* tablet landscape */
-@media only screen and (min-width: 56.25em) {
-    :root {
-        --column-count: 4;
-    }
-}
-
-/* desktop screens */
-@media only screen and (min-width: 75em) {
-    :root {
-        --column-count: 6
-    }
-}
-
-/* large screens */
-@media only screen and (min-width: 112.5em) {
-    :root {
-        --column-count: 9;
-    }
-}
-
-/* 2k screens */
-@media only screen and (min-width: 150px) {
-    :root {
-        --column-count: 12;
-    }
-}
-
-/* 4k screens */
-@media only screen and (min-width: 200em) {
-    :root {
-        --column-count: 16;
-    }
-}
-
-
-
-
 
 
 html {
@@ -148,12 +70,12 @@ body {
 .appbar .begin {
     display: inline-flex;
     position: relative;
-    float: left;
+    float: var( --i18n-begin );
     padding-left: 1em;
     justify-content: center;
     vertical-align: middle;
     line-height: 4em;
-
+    direction: var( --i18n-direction );
 }
 
 .appbar .begin *{
@@ -162,18 +84,21 @@ body {
     vertical-align: middle;
     color: var( --theme-dark-color-text-primary );
     text-decoration: none;
+    direction: var( --i18n-direction );
 
 }
 .appbar .end {
     display: inline-flex;
     position: relative;
-    float: right;
+    float: var( --i18n-end );
     padding-right: 1em;
     justify-content: center;
     vertical-align: middle;
     line-height: 4em;
     color: var( --theme-dark-color-text-primary );
     text-decoration: none;
+    direction: var( --i18n-direction );
+
 }
 .appbar .end *{
     display: inline-flex;
@@ -181,10 +106,22 @@ body {
     vertical-align: middle;
     color: var( --theme-dark-color-text-primary );
     text-decoration: none;
+    direction: var( --i18n-direction );
+
 
 }
 .appbar i {
     padding: .75em;
+}
+.badge:after {
+   background-color: #ff1010;
+   border-radius: 50%;
+   content:attr(data-bubble);  
+ 
+    width: .4em;
+    height: .4em;
+    margin-left: -.3em;
+
 }
 
 .userCoin {
@@ -215,15 +152,6 @@ body {
     text-align: center;
 }
 
-.mdCard {
-  background: #fff;
-  border-radius: 1em;
-  display: inline-block;
-  height: 300px;
-  margin: 1rem;
-  position: relative;
-  width: 300px;
-}
 
 .cardImage {
     width: 100%;
