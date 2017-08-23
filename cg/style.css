@@ -127,15 +127,50 @@ body {
     color: var( --theme-dark-color-text-primary );
     position: fixed;
     top:0;
-    height: 2.5em;
+    height: 4em;
     width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    vertical-align: middle;
+
 }
-.appbar .icon {
-    padding-top: 1em;
-    padding-left: 1em;
+
+
+.appbar .begin {
+    display: inline-flex;
+    position: relative;
+    float: left;
+    justify-content: center;
+    vertical-align: middle;
+    line-height: 4em;
+
 }
-.appbar * {
-    display: inline-block;
+
+.appbar .begin *{
+    display: inline-flex;
+    justify-content: center;
+    vertical-align: middle;
+    color: var( --theme-dark-color-text-primary );
+    text-decoration: none;
+
+}
+.appbar .end {
+    display: inline-flex;
+    position: relative;
+    float: right;
+    justify-content: center;
+    vertical-align: middle;
+    line-height: 4em;
+    color: var( --theme-dark-color-text-primary );
+    text-decoration: none;
+}
+.appbar .end *{
+    display: inline-flex;
+    justify-content: center;
+    vertical-align: middle;
+    color: var( --theme-dark-color-text-primary );
+    text-decoration: none;
+
 }
 
 .card {
