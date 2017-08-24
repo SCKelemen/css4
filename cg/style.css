@@ -33,6 +33,7 @@
     --i18n-begin-pad: 1em;
     --i18n-end-pad: 1em;
     --i18n-direction: ltr; /* left to right */
+
 }
 
 
@@ -200,5 +201,71 @@ body {
 }
 
 .imageCard .content {
+
+}
+
+.userPanel {
+    background-color: #424242;
+    position: fixed;
+    top: 4em;
+    right: 0;
+
+    width: 20em;
+    display: grid;
+    grid-template-areas: "userCoin userInfo"
+                         "settings logout";
+   
+                         padding-bottom: 1em;
+    
+}
+
+.userPanel .userCoin {
+    grid-area: userCoin;
+    display: inline-block;
+}
+.userPanel .userInfo {
+    padding-top: 1em;
+    margin-left: -3em;
+    grid-area: userInfo;
+    color: var( --color-card-title );
+    display: inline-block;
+    
+}
+.userPanel .userInfo span {
+    text-align: left;
+    float: left;
+    display: inline-block;
+}
+
+.userPanel .settings {
+    padding-left: 2em;
+    grid-area: settings;
+    display: inline-block;
+    color: var( --color-card-title );
+     justify-content: center;
+    vertical-align: middle;
+    text-decoration: none;
+}
+.userPanel .logout {
+    grid-area: logout;
+    display: inline-block;
+    color: var( --color-card-title );
+    justify-content: center;
+    vertical-align: middle;
+    text-decoration: none;
+    background-color: var(--color-background);
+    width: 8em;
+    padding-bottom: 1em;
+}
+
+
+.demoScene {
+    background: linear-gradient(#009fe1, #3acec2),
+                url('img/trex2.jpg') no-repeat;
+             
+    background-blend-mode: multiply;
+    height: 50em;
+}
+.demoScene img {
 
 }
