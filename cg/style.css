@@ -269,3 +269,11 @@ body {
 .demoScene img {
 
 }
+.demoScene .flag {
+    font-size: 2em;
+    font-weight: 700;
+    float: right;
+    justify-content: center;
+    vertical-align: middle;
+    margin-left: 3em;
+}

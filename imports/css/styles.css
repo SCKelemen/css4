@@ -1,0 +1,17 @@
+@import "colours.css" screen;
+@import "printtheme.css" print;
+
+body {
+    background: var( --color-red );
+    color: var( --color-blue );
+}
+
+h1 {
+    color: var( --color-green );
+}
+
+p {
+    color: var( --color-blue );
+    background: var( --color-green );
+}
+
