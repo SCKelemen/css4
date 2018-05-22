@@ -28,8 +28,8 @@
 
 
     /* RTL Support */
-    --i18n-begin: left; /*  left to right */
-    --i18n-end: right; /* left to right */
+    --i18n-begin: right; /*  left to right */
+    --i18n-end: left; /* left to right */
     --i18n-begin-pad: 1em;
     --i18n-end-pad: 1em;
     --i18n-direction: ltr; /* left to right */
